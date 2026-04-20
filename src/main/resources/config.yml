@@ -1,0 +1,87 @@
+database:
+  host: "localhost"
+  port: 3306
+  name: "clansystem"
+  username: "root"
+  password: "password"
+  pool:
+    maximum-pool-size: 10
+    minimum-idle: 2
+    connection-timeout: 30000
+    idle-timeout: 600000
+    max-lifetime: 1800000
+
+clan:
+  name-min-length: 3
+  name-max-length: 20
+  tag-min-length: 2
+  tag-max-length: 5
+  max-members: 30
+  max-territories: 10
+  invite-expiry-seconds: 60
+  default-pvp-in-territory: false
+  default-mob-spawning: true
+  home-teleport-delay: 3
+  home-teleport-cooldown: 60
+
+chat:
+  clan-chat-format: "&8[&6{clan_tag}&8] &7{role} &f{player}&7: &e{message}"
+  global-chat-prefix: "&8[&6{clan_tag}&8] "
+
+territory:
+  use-worldguard: true
+  claim-by-chunk: true
+  protection:
+    prevent-build-by-outsiders: true
+    prevent-pvp-by-outsiders: true
+    prevent-mob-damage-to-blocks: true
+
+messages:
+  prefix: "&8[&6Clan&8] &r"
+  no-permission: "&cNon hai il permesso per farlo."
+  player-only: "&cSolo i giocatori possono usare questo comando."
+  clan-already-exists: "&cUn clan con questo nome o tag esiste già."
+  clan-created: "&aClano &6{clan}&a creato con successo!"
+  clan-disbanded: "&cIl clan &6{clan}&c è stato sciolto."
+  not-in-clan: "&cNon sei in nessun clan."
+  already-in-clan: "&cSei già in un clan."
+  target-in-clan: "&cIl giocatore è già in un clan."
+  invite-sent: "&aInvito inviato a &6{player}&a."
+  invite-received: "&aHai ricevuto un invito dal clan &6{clan}&a. Scrivi &e/clan accept&a per accettare."
+  invite-accepted: "&a{player}&a si è unito al clan!"
+  invite-declined: "&c{player}&c ha rifiutato l'invito."
+  invite-declined-self: "&7Hai rifiutato l'invito."
+  invite-expired: "&cL'invito è scaduto."
+  no-invite: "&cNon hai inviti pendenti."
+  kicked: "&cSei stato espulso dal clan."
+  kick-success: "&a{player}&a è stato espulso dal clan."
+  promoted: "&a{player}&a è stato promosso a &6{role}&a."
+  demoted: "&c{player}&c è stato retrocesso a &6{role}&c."
+  territory-claimed: "&aHai reclamato questo territorio!"
+  territory-unclaimed: "&cHai liberato questo territorio."
+  territory-already-claimed: "&cQuesto territorio è già reclamato."
+  territory-not-yours: "&cQuesto territorio appartiene a un altro clan."
+  territory-limit-reached: "&cHai raggiunto il limite massimo di territori."
+  home-set: "&aHome del clan impostata!"
+  home-not-set: "&cNessuna home del clan è stata impostata."
+  home-teleporting: "&aTeletrasporto in corso... non muoverti!"
+  home-teleported: "&aBenvenuto alla home del clan!"
+  home-cooldown: "&cDevi aspettare &6{seconds}&c secondi prima di teletrasportarti di nuovo."
+  player-not-found: "&cGiocatore non trovato."
+  invalid-name: "&cNome o tag non valido (solo lettere, numeri e underscore)."
+  name-too-short: "&cIl nome del clan deve essere lungo almeno &6{min}&c caratteri."
+  name-too-long: "&cIl nome del clan non può superare &6{max}&c caratteri."
+  tag-too-short: "&cIl tag del clan deve essere lungo almeno &6{min}&c caratteri."
+  tag-too-long: "&cIl tag del clan non può superare &6{max}&c caratteri."
+  max-members-reached: "&cIl clan ha raggiunto il numero massimo di membri."
+  not-enough-rank: "&cNon hai un rango sufficiente per eseguire questa azione."
+  cannot-kick-leader: "&cNon puoi espellere il leader del clan."
+  cannot-target-self: "&cNon puoi eseguire questa azione su te stesso."
+  already-officer: "&c{player}&c è già un Officer."
+  already-member: "&c{player}&c è già un Member."
+  left-clan: "&7Hai abbandonato il clan &6{clan}&7."
+  member-left: "&7{player} &7ha abbandonato il clan."
+  leader-cannot-leave: "&cIl leader non può abbandonare il clan. Usa &e/clan disband&c."
+  member-disconnected: "&7[Clan] &c{player}&7 si è disconnesso."
+  help-header: "&8&m----&r &6ClanSystem &8&m----"
+  help-footer: "&8&m----------------------"

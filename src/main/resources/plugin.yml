@@ -1,0 +1,59 @@
+name: ClanSystem
+version: '${project.version}'
+main: it.stormcraft.clansystem.ClanSystem
+api-version: '1.21'
+description: A robust clan and territory management plugin
+author: CkAnto
+website: https://github.com/stormcraft-mc/ClanSystem
+
+softdepend:
+  - WorldGuard
+  - PlaceholderAPI
+
+commands:
+  clan:
+    description: Main clan command
+    usage: /clan <subcommand> [args]
+    aliases: [ c, clans ]
+
+permissions:
+  clansystem.clan.create:
+    description: Allows creating a clan
+    default: true
+  clansystem.clan.disband:
+    description: Allows disbanding a clan
+    default: true
+  clansystem.clan.invite:
+    description: Allows inviting players to a clan
+    default: true
+  clansystem.clan.kick:
+    description: Allows kicking members from a clan
+    default: true
+  clansystem.clan.promote:
+    description: Allows promoting/demoting members
+    default: true
+  clansystem.clan.chat:
+    description: Allows using clan chat
+    default: true
+  clansystem.clan.leave:
+    description: Allows leaving a clan
+    default: true
+  clansystem.clan.claim:
+    description: Allows claiming territory
+    default: true
+  clansystem.clan.home:
+    description: Allows teleporting to clan home
+    default: true
+  clansystem.admin:
+    description: Grants all admin permissions
+    default: op
+    children:
+      clansystem.clan.create: true
+      clansystem.clan.disband: true
+      clansystem.clan.invite: true
+      clansystem.clan.kick: true
+      clansystem.clan.promote: true
+      clansystem.clan.chat: true
+      clansystem.clan.leave: true
+      clansystem.clan.claim: true
+      clansystem.clan.home: true
